@@ -1,4 +1,10 @@
-var elem = document.getElementById('cat');
-elem.addEventListener('click', function() {
-  score = score + 1;
-}, false);
+var Score = 0;
+
+Changescore = function() {
+  Score += 1;
+  $("#score").text(Score);
+};
+
+$("#cat").click(function(e) {
+  Changescore();
+});
